@@ -77,7 +77,7 @@ except ImportError:
     KERNELS_INSTALLED = False
 
 if not KERNELS_INSTALLED and CUDA_VERSION and INSTALL_KERNELS and CUDA_VERSION.startswith("12"):
-    requirements.append("autoawq-kernels")
+    requirements.append("autoawq-kernels==0.0.6")
 
 elif IS_CPU_ONLY:
     requirements.append("intel-extension-for-pytorch>=2.4.0")
